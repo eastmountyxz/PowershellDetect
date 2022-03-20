@@ -3,9 +3,14 @@
 
 ## 一.学术论文
 
-(1) Zhenyuan Li, et al. Effective and Light-Weight Deobfuscation and Semantic-Aware Attack Detection for PowerShell Scripts. CCS, 2019: 1831-1847.
+(1) Zhenyuan Li, et al. **Effective and Light-Weight Deobfuscation and Semantic-Aware Attack Detection for PowerShell Scripts**. CCS, 2019: 1831-1847.
 - https://dl.acm.org/doi/pdf/10.1145/3319535.3363187
 - 浙江大学，最经典的一篇Powershell论文，详细介绍解混淆工作
+
+(2) Danny Hendler, et al. **Detecting Malicious PowerShell Commands using Deep Neural Networks**. AsiaCCS, 2018: 187-197.
+- BGU、微软
+- https://dl.acm.org/doi/pdf/10.1145/3196494.3196511
+
 
 
 ---
