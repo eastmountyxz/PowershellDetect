@@ -19,6 +19,14 @@
 - 中科院信工所
 
 
+(5) Yong Fang, Xiangyu Zhou, Cheng Huang. Effective method for detecting malicious PowerShell scripts based on hybrid features. Neurocomputing, 448: 30-39 (2021).
+- 四川大学
+- https://www.sciencedirect.com/science/article/pii/S0925231221005099
+
+(6) 彭国军, 等. 基于深度学习的PowerShell恶意代码家族分类研究[J]. 武汉大学学报（理学版）, 2022(1)
+- 武汉大学国家网络安全学院
+
+
 ---
 
 ## 二.开源工具
@@ -34,7 +42,8 @@
 **(2) 其他**
 
 - https://powershell.one/powershell-internals/parsing-and-tokenization/abstract-syntax-tree
-- 
+- https://powershell.one/powershell-internals/parsing-and-tokenization/simple-tokenizer
+- https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.psparser.tokenize?view=powershellsdk-7.0.0
 
 ---
 
