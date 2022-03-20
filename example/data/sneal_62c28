@@ -1,0 +1,62 @@
+$is_64bit = [IntPtr]::size -eq 8
+
+$ssh_install_dir = "$env:ProgramFiles\OpenSSH"
+$ssh_installer = "$env:TEMP\setupssh-6.4p1-1.exe"
+
+$ssh_download_url = "http://www.mls-software.com/files/setupssh-6.4p1-1.exe";
+if ($is_64bit) {
+  $ssh_installer = "$env:TEMP\setupssh-6.4p1-1(x64).exe"
+  $ssh_download_url = "http://www.mls-software.com/files/setupssh-6.4p1-1(x64).exe"
+}
+
+if (!(Test-Path $ssh_installer)) {
+  Write-Host "Downloading $ssh_download_url"
+  (New-Object System.Net.WebClient).DownloadFile($ssh_download_url, $ssh_installer)
+}
+
+if (!(Test-Path "$ssh_install_dir\bin\ssh.exe")) {
+  Write-Host "Installing OpenSSH"
+  Start-Process $ssh_installer "/S /port=22" -NoNewWindow -Wait
+}
+
+Stop-Service "OpenSSHd" -Force
+
+Write-Host "Configuring necessary privileges for Administrator account to run SSH service"
+$edit_rights_path = "$ssh_install_dir\bin\editrights.exe"
+Start-Process $edit_rights_path "-a SeServiceLogonRight -u Administrator" -NoNewWindow -Wait
+
+Write-Host "Setting SSH home directories"
+(Get-Content "$ssh_install_dir\etc\passwd") |
+  Foreach-Object { $_ -replace '/home/(\w+)', '/cygdrive/c/Users/$1' } |
+    Set-Content "$ssh_install_dir\etc\passwd"
+
+Write-Host "Setting OpenSSH to be non-strict"
+$sshd_config = Get-Content "$ssh_install_dir\etc\sshd_config"
+$sshd_config = $sshd_config -replace 'StrictModes yes', 'StrictModes no'
+$sshd_config = $sshd_config -replace '#PubkeyAuthentication yes', 'PubkeyAuthentication yes'
+$sshd_config = $sshd_config -replace '#PermitUserEnvironment no', 'PermitUserEnvironment yes'
+$sshd_config = $sshd_config -replace 'Banner /etc/banner.txt', '#Banner /etc/banner.txt'
+Set-Content "$ssh_install_dir\etc\sshd_config" $sshd_config
+
+Write-Host "Setting SSH temp directory to Windows temp"
+Remove-Item -Recurse -Force -ErrorAction SilentlyContinue "$ssh_install_dir\tmp"
+C:\Program` Files\OpenSSH\bin\junction.exe /accepteula "$ssh_install_dir\tmp" "C:\Windows\Temp"
+
+Write-Host "Setting SSH environment"
+New-Item -ItemType Directory -Force -Path "C:\Users\Administrator\.ssh"
+$sshenv = "TEMP=C:\Windows\Temp"
+if ($is_64bit) {
+  $env_vars = "ProgramFiles(x86)=C:\Program Files (x86)", `
+    "ProgramW6432=C:\Program Files", `
+    "CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files", `
+    "CommonProgramW6432=C:\Program Files\Common Files"
+  $sshenv = $sshenv + "`r`n" + ($env_vars -join "`r`n")
+}
+Set-Content C:\Users\Administrator\.ssh\environment $sshenv
+
+Write-Host "Setting OpenSSHd service account to administrator"
+$service = gwmi win32_service -computer . -filter "name='opensshd'"
+$service.change($null,$null,$null,$null,$null,$null,".\Administrator","password")
+
+
+
