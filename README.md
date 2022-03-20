@@ -26,6 +26,19 @@
 (6) 彭国军, 等. 基于深度学习的PowerShell恶意代码家族分类研究[J]. 武汉大学学报（理学版）, 2022(1)
 - 武汉大学国家网络安全学院
 
+(7) Gili Rusak, et al. AST-Based Deep Learning for Detecting Malicious PowerShell. CCS, 2018: 2276-2278.
+- CSAIL, MIT, USA
+- https://dl.acm.org/doi/10.1145/3243734.3278496
+
+(8) Chao Liu, et al. PSDEM: A Feasible De-Obfuscation Method for Malicious PowerShell Detection. ISCC, 2018: 825-831.
+- 中科院信工所
+- https://ieeexplore.ieee.org/document/8538691
+
+(9) Denis Ugarte, et al. PowerDrive: Accurate De-obfuscation and Analysis of PowerShell Malware. DIMVA，2019: 240-259.
+- University of Cagliari
+- https://link.springer.com/chapter/10.1007/978-3-030-22038-9_12
+
+
 
 ---
 
