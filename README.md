@@ -11,6 +11,10 @@
 - BGU、微软
 - https://dl.acm.org/doi/pdf/10.1145/3196494.3196511
 
+(3) Danny Hendler, et al. **AMSI-Based Detection of Malicious PowerShell Code Using Contextual Embeddings**. AsiaCCS, 2020: 679-693
+- BGU、微软
+- https://dl.acm.org/doi/pdf/10.1145/3320269.3384742
+
 
 
 ---
