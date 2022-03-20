@@ -23,7 +23,18 @@
 
 ## 二.开源工具
 
+**(1) github**
 
+- https://github.com/danielbohannon/Invoke-Obfuscation
+- https://github.com/Malandrone/PowerDecode
+- https://github.com/zhangj111/astnn
+- https://github.com/lzybkr/ShowPSAst
+- https://github.com/thewhiteninja/deobshell
+
+**(2) 其他**
+
+- https://powershell.one/powershell-internals/parsing-and-tokenization/abstract-syntax-tree
+- 
 
 ---
 
