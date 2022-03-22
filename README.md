@@ -46,6 +46,9 @@
 - https://link.springer.com/chapter/10.1007/978-3-030-22038-9_12
 
 
+(10) Jian Zhang, et al.** A Novel Neural Source Code Representation Based on Abstract Syntax Tree**. 2019 IEEE/ACM 41st International Conference on Software Engineering (ICSE), 2019.
+- C语言抽象语法树
+- https://ieeexplore.ieee.org/document/8812062
 
 ---
 
