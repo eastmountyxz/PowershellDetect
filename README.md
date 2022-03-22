@@ -50,6 +50,11 @@
 - C语言抽象语法树
 - https://ieeexplore.ieee.org/document/8812062
 
+
+(11) G. M. Malandrone, G. Virdis, G. Giacinto , D. Maiorca. **PowerDecode: a PowerShell Script Decoder Dedicated to Malware Analysis**. 5th Italian Conference on CyberSecurity (ITASEC), 2021.
+- 解混淆工具
+- https://github.com/Malandrone/PowerDecode
+
 ---
 
 ## 二.开源工具
