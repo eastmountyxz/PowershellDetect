@@ -1,6 +1,13 @@
 # PowershellDetect
 该资源详细介绍Powershell脚本混淆、解混淆、抽象语法树提取、token提取、恶意性检测等内容，希望对您有所帮助！
 
+作者博客：
+- Powershell恶意代码检测 (1)论文总结及抽象语法树（AST）提取
+- Powershell恶意代码检测 (2)抽象语法树自动提取万字详解
+- Powershell恶意代码检测 (3)Token关键词自动提取
+- Powershell恶意代码检测 (4)混淆和反混淆
+- Powershell恶意代码检测 (5)APT中的Powershell、常用数据集及数据标注实验
+
 ## 一.学术论文
 
 (1) Zhenyuan Li, et al. **Effective and Light-Weight Deobfuscation and Semantic-Aware Attack Detection for PowerShell Scripts**. CCS, 2019: 1831-1847.
@@ -62,11 +69,7 @@
 
 ## 三.混淆及反混淆
 
-作者博客：
-- Powershell恶意代码检测 (1)论文总结及抽象语法树（AST）提取
-- Powershell恶意代码检测 (2)抽象语法树自动提取万字详解
-- Powershell恶意代码检测 (3)Token关键词自动提取
-- Powershell恶意代码检测 (4)混淆和反混淆
+
 
 
 ----
