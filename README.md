@@ -56,6 +56,13 @@
 - 解混淆工具
 - https://github.com/Malandrone/PowerDecode
 
+
+(12) C. Xiong, Z. Li, et al. **Generic, efficient, and effective deobfuscation and semantic-aware attack detection for PowerShell scripts**. Frontiers of Information Technology & Electronic Engineering, vol.23, no.3, 2022, pp. 361-381.
+- 浙大团队
+- https://link.springer.com/article/10.1631/FITEE.2000436
+
+
+
 ---
 
 ## 二.开源工具
