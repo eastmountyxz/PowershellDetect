@@ -61,6 +61,8 @@
 - 浙大团队
 - https://link.springer.com/article/10.1631/FITEE.2000436
 
+(13) A. Alahmadi, N. Alkhraan, et al. **MPSAutodetect: A Malicious Powershell Script Detection Model Based on Stacked Denoising Auto-Encoder**. Computers & Security, vol.116, 2022, p. 102658.
+- https://www.sciencedirect.com/science/article/pii/S0167404822000578
 
 
 ---
