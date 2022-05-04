@@ -1,6 +1,11 @@
 # PowershellDetect
 该资源详细介绍Powershell脚本混淆、解混淆、抽象语法树提取、token提取、恶意性检测等内容，希望对您有所帮助！
 
+
+LotL离地攻击：
+- https://github.com/LOLBAS-Project/LOLBAS
+
+
 作者博客：
 - Powershell恶意代码检测 (1)论文总结及抽象语法树（AST）提取
 - Powershell恶意代码检测 (2)抽象语法树自动提取万字详解
